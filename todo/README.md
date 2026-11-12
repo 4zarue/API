@@ -5,7 +5,7 @@ Running:
 npm run dev 
 
 browser:
-http://localhost:3000/todos
+http://localhost:3000/todos/(id)
 
 Endpoints:
 POST /todos GET /todos GET /todos/:id PUT /todos/:id DELETE /todos/:id
