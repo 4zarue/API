@@ -1,0 +1,62 @@
+### Create todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "title": "Learn Express",
+  "description": "Practice CRUD API",
+  "state": "todo"
+}
+
+###
+
+### Get all todos
+GET http://localhost:3000/todos
+
+###
+
+### Get todos by state
+GET http://localhost:3000/todos?state=doing
+
+###
+
+### Get one todo
+GET http://localhost:3000/todos/ca67b15e-2f4c-493e-8a0a-395e34d9480b
+
+###
+
+### Update todo
+PUT http://localhost:3000/todos/ca67b15e-2f4c-493e-8a0a-395e34d9480b
+Content-Type: application/json
+
+{
+  "title": "Learn Express",
+  "description": "Updated",
+  "state": "done"
+}
+
+###
+
+### Delete todo
+DELETE http://localhost:3000/todos/ca67b15e-2f4c-493e-8a0a-395e34d9480b
+
+###
+
+### Invalid state
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "state": "invalid"
+}
+
+###
+
+### Todo not found
+GET http://localhost:3000/todos/12345
+
+###
+
+### Delete nonexistent todo
+DELETE http://localhost:3000/todos/12345
